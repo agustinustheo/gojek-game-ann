@@ -1,0 +1,1 @@
+opencv_createsamples -img obstacle1.jpg -bg obstacle1.txt -info info-obstacle1/info.lst -pngoutput info -maxxangle 0 -maxyangle 0 -maxzangle 0 -num 750
