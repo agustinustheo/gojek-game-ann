@@ -1,6 +1,5 @@
 obstacle*.txt
 player.txt
 warning.txt
-*.png
 neg-*/
 info-*/
