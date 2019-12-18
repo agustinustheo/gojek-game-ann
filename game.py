@@ -26,7 +26,7 @@ playerImg = pygame.image.load('objects/player.png')
 player_img_size = playerImg.get_rect().size
 
 # Get background
-background = pygame.image.load('game-snapshots/full_snap__bg.png')
+# background = pygame.image.load('game-snapshots/full_snap__bg.png')
 
 array_of_obstacles = []
 dirs = os.listdir('objects')
@@ -36,7 +36,7 @@ for x in dirs:
 
 def player(x, y):
     # Spawn player image
-    gameDisplay.blit(playerImg, (x, y))
+    # gameDisplay.blit(playerImg, (x, y))
     # Spawn player replacement
     pygame.draw.rect(gameDisplay, red, [x, y, player_img_size[0], player_img_size[1]])
 
@@ -80,7 +80,7 @@ def game_loop():
             x+=x_change
 
         # Use background
-        gameDisplay.blit(background,(0,0))
+        # gameDisplay.blit(background,(0,0))
         # Fill with white
         gameDisplay.fill(white)
 
@@ -98,10 +98,18 @@ def game_loop():
         for i, obstacle in enumerate(generated_obstacles):
             obstacle[2]+=obstacle_speed
             obstacle_img_size = obstacle[0].get_rect().size
+
+            # Check if player is in the same lane as obstacle
+            if playerPos==obstacle[1]:
+                # Check if obstacle is in the player OR if the player is in the obstacle
+                if ((y+player_img_size[1] >= obstacle[2]+obstacle_img_size[1] and y <= obstacle[2]+obstacle_img_size[1]) or (obstacle[2]+obstacle_img_size[1] >= y+player_img_size[1] and obstacle[2] <= y+player_img_size[1])):
+                    crashed=True
+
             # Spawn obstacle
-            gameDisplay.blit(obstacle[0], (position_coordinates[obstacle[1]], obstacle[2]))
+            # gameDisplay.blit(obstacle[0], (position_coordinates[obstacle[1]], obstacle[2]))
             # Spawn obstacle replacement
             pygame.draw.rect(gameDisplay, black, [position_coordinates[obstacle[1]], obstacle[2], obstacle_img_size[0], obstacle_img_size[1]])
+
             if obstacle[2] > display_height:
                 del generated_obstacles[i]
 
