@@ -1,0 +1,7 @@
+opencv_createsamples -info objects/info-obstacle1/info.lst -num 750 -w 76 -h 103 -vec objects/obstacle1-positives.vec
+opencv_createsamples -info objects/info-obstacle2/info.lst -num 750 -w 76 -h 103 -vec objects/obstacle2-positives.vec
+opencv_createsamples -info objects/info-obstacle3/info.lst -num 750 -w 76 -h 103 -vec objects/obstacle3-positives.vec
+opencv_createsamples -info objects/info-obstacle4/info.lst -num 750 -w 76 -h 103 -vec objects/obstacle4-positives.vec
+opencv_createsamples -info objects/info-obstacle5/info.lst -num 750 -w 76 -h 103 -vec objects/obstacle5-positives.vec
+opencv_createsamples -info objects/info-player/info.lst -num 750 -w 76 -h 103 -vec objects/player-positives.vec
+opencv_createsamples -info objects/info-warning/info.lst -num 750 -w 76 -h 103 -vec objects/warning-positives.vec

@@ -1,1 +1,7 @@
-opencv_createsamples -img obstacle1.jpg -bg obstacle1.txt -info info-obstacle1/info.lst -pngoutput info -maxxangle 0 -maxyangle 0 -maxzangle 0 -num 750
+opencv_createsamples -img objects/obstacle1.jpg -bg objects/obstacle1.txt -info objects/info-obstacle1/info.lst -pngoutput objects/info-obstacle1 -maxxangle 0 -maxyangle 0 -maxzangle 0 -num 750
+opencv_createsamples -img objects/obstacle2.jpg -bg objects/obstacle2.txt -info objects/info-obstacle2/info.lst -pngoutput objects/info-obstacle2 -maxxangle 0 -maxyangle 0 -maxzangle 0 -num 750
+opencv_createsamples -img objects/obstacle3.jpg -bg objects/obstacle3.txt -info objects/info-obstacle3/info.lst -pngoutput objects/info-obstacle3 -maxxangle 0 -maxyangle 0 -maxzangle 0 -num 750
+opencv_createsamples -img objects/obstacle4.jpg -bg objects/obstacle4.txt -info objects/info-obstacle4/info.lst -pngoutput objects/info-obstacle4 -maxxangle 0 -maxyangle 0 -maxzangle 0 -num 750
+opencv_createsamples -img objects/obstacle5.jpg -bg objects/obstacle5.txt -info objects/info-obstacle5/info.lst -pngoutput objects/info-obstacle5 -maxxangle 0 -maxyangle 0 -maxzangle 0 -num 750
+opencv_createsamples -img objects/player.jpg -bg objects/player.txt -info objects/info-player/info.lst -pngoutput objects/info-player -maxxangle 0 -maxyangle 0 -maxzangle 0 -num 750
+opencv_createsamples -img objects/warning.jpg -bg objects/warning.txt -info objects/info-warning/info.lst -pngoutput objects/info-warning -maxxangle 0 -maxyangle 0 -maxzangle 0 -num 750

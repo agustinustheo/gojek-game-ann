@@ -1,0 +1,7 @@
+opencv_traincascade -data data/obstacle1 -vec obstacle1-positives.vec -bg obstacle1.txt -numPos 600 -numNeg 300 -numStages 5 -w 76 -h 103
+opencv_traincascade -data data/obstacle2 -vec obstacle2-positives.vec -bg obstacle2.txt -numPos 600 -numNeg 300 -numStages 5 -w 76 -h 103
+opencv_traincascade -data data/obstacle3 -vec obstacle3-positives.vec -bg obstacle3.txt -numPos 600 -numNeg 300 -numStages 5 -w 76 -h 103
+opencv_traincascade -data data/obstacle4 -vec obstacle4-positives.vec -bg obstacle4.txt -numPos 600 -numNeg 300 -numStages 5 -w 76 -h 103
+opencv_traincascade -data data/obstacle5 -vec obstacle5-positives.vec -bg obstacle5.txt -numPos 600 -numNeg 300 -numStages 5 -w 76 -h 103
+opencv_traincascade -data data/player -vec player-positives.vec -bg player.txt -numPos 600 -numNeg 300 -numStages 5 -w 76 -h 103
+opencv_traincascade -data data/warning -vec warning-positives.vec -bg warning.txt -numPos 600 -numNeg 300 -numStages 5 -w 76 -h 103
