@@ -109,6 +109,8 @@ class Game:
                 if playerPos==obstacle[1]:
                     # Check if obstacle is in the player OR if the player is in the obstacle
                     if ((y+self.player_img_size[1] >= obstacle[2]+obstacle_img_size[1] and y <= obstacle[2]+obstacle_img_size[1]) or (obstacle[2]+obstacle_img_size[1] >= y+self.player_img_size[1] and obstacle[2] <= y+self.player_img_size[1])):
+                        # Game Over
+                        pygame.draw.rect(game_display, self.black, [10, 10, 10, 10])
                         crashed=True
 
                 # Spawn obstacle
@@ -121,10 +123,6 @@ class Game:
 
             spawn_timer-=1
             pygame.display.update()
-
-        # Game Over
-        pygame.font.SysFont('Arial', 20).render('Game Over', False, (0, 0, 0)) 
-        pygame.display.update()
         
         while True:
             for event in pygame.event.get():
@@ -132,7 +130,7 @@ class Game:
                     if event.type == pygame.KEYDOWN:
                         if event.key == pygame.K_SPACE:
                             self.start_game()
-                        else:
+                        elif event.key == pygame.K_DOWN:
                             self.quit_game()
                 elif event.type == pygame.QUIT:
                     self.quit_game()

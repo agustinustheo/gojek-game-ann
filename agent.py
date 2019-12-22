@@ -16,6 +16,11 @@ class GameAgent:
         im = np.array(ImageGrab.grab(box))
         return im
 
+    def is_crashed(self, img):
+        if np.any(img[11, 11] != 0):
+            return False
+        return True
+
     def move_left(self):
         pyautogui.keyDown('left')
         time.sleep(0.2)
@@ -28,3 +33,7 @@ class GameAgent:
 
     def click_game(self):
         pyautogui.click(x=100, y=365)
+
+    def get_state(self):
+        img = self.screen_grab()
+        return im, is_crashed(img)
