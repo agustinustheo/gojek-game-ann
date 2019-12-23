@@ -6,4 +6,5 @@ import pygame.locals
 from game import Game
 
 game = Game()
-game.train_ai()
+# Enter True parameter to train mode, False parameter to use model
+game.train_ai(False)
