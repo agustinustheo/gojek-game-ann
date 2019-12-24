@@ -190,7 +190,7 @@ class Game:
                 elif event.type == pygame.QUIT:
                     self.quit_game()
 
-    def train_ai(self, train):
+    def train_ai(self, is_training):
         # Set window spawn position
         os.environ['SDL_VIDEO_WINDOW_POS'] = "0,0"
         reward = 0
@@ -238,7 +238,7 @@ class Game:
             stacked_image = np.stack((image, image, image, image), axis=2).reshape(1, self.img_cols, self.img_rows, self.img_channels)
 
             # Randomly explore an action
-            if random.random() <= self.epsilon and train: 
+            if random.random() <= self.epsilon and is_training: 
                 print("----------Random Action----------")
                 action_index = random.randrange(self.ACTIONS)
             else: 
@@ -354,8 +354,9 @@ class Game:
                         targets[i, action_t] = reward_t + 0.9 * np.max(Q_sa)
 
                 loss += self.model.train_on_batch(inputs, targets)
+                observation += 50
         
-        self.train_ai()
+        self.train_ai(is_training)
 
     def quit_game(self):
         pygame.quit()
