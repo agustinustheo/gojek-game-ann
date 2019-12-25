@@ -25,6 +25,7 @@ https://medium.com/acing-ai/how-i-build-an-ai-to-play-dino-run-e37f37bdf153
 ## To install and play model
 
 Run this:
-> pip install -r requirements.txt
 <br>
-> python train.py
+pip install -r requirements.txt
+<br>
+python train.py
