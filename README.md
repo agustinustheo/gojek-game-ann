@@ -7,16 +7,22 @@ Credits to:
 Harrison Kinsley a.k.a sentdex, Ravi Munde
 
 Tutorials and Code from them below:  
+<br>
 Sentdex, tutorial on how to make a game using PyGame: 
-+ https://www.youtube.com/watch?v=ujOTNg17LjI&list=PLQVvvaa0QuDdLkP8MrOXLe_rKuf6r80KO
+<br>
+https://www.youtube.com/watch?v=ujOTNg17LjI&list=PLQVvvaa0QuDdLkP8MrOXLe_rKuf6r80KO
+<br>
 Sentdex, tutorial on how to create your haar cascade model:
-+ https://www.youtube.com/watch?v=eay7CgPlCyo
+<br>
+https://www.youtube.com/watch?v=eay7CgPlCyo
+<br>
 Ravi Munde, article on How he built an AI to play Dino Run: 
-+ https://medium.com/acing-ai/how-i-build-an-ai-to-play-dino-run-e37f37bdf153
+<br>
+https://medium.com/acing-ai/how-i-build-an-ai-to-play-dino-run-e37f37bdf153
 
 #### Model and training code was heavily inspired Ravi Munde
 
-# To install and play model
+## To install and play model
 
 Run this:
 > pip install -r requirements.txt
